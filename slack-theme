@@ -86,9 +86,9 @@ then
     chmod 755 "$DIR/slack-theme"
     chmod 755 "$DIR/slack-day"
     chmod 755 "$DIR/slack-night"
-    if [ -z "$(cat ~/.bashrc | grep "PATH=\$PATH:$PWD")" ]
+    if [ -z "$(cat ~/.bashrc | grep "PATH=$PWD:\$PATH")" ]
     then
-        echo "\nexport PATH\"=$PWD:\$PATH\"" >> ~/.bashrc
+        echo "export PATH=\"$PWD:\$PATH\"" >> ~/.bashrc
     fi
     echo "installed successfully"
     exit 0
@@ -102,7 +102,7 @@ then
     rm "$DIR/slack-day"
     rm "$DIR/slack-night"
     rm -rf "$BACKUP_FOLDER"
-    sed -i '' "/export PATH\"=${PWD//\//\\/}:\$PATH\"/g" ~/.bashrc
+    sed -i "/export PATH=\"${PWD//\//\\/}\:\$PATH\"/g" ~/.bashrc
     echo "uninstalled successfully"
     exit 0
 fi
