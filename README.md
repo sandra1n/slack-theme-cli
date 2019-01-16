@@ -19,7 +19,7 @@ A Command-Line Tool for changing Slack's desktop app colors, like
 To download and install, run the following code in your terminal:
 
 ```sh
-curl https://raw.githubusercontent.com/mykeels/slack-theme-cli/master/slack-theme -O && chmod +x ./slack-theme && ./slack-theme install && . ~/.bash_profile
+curl https://raw.githubusercontent.com/sandra1n/slack-theme-cli/master/slack-theme -O && chmod +x ./slack-theme && ./slack-theme install && . ~/.bash_profile
 ```
 
 ## How to use
